@@ -26,7 +26,7 @@ public class TwoPlayersGui extends BaseFrame implements ActionListener {
 
         frame.add(drawPanel);
     }
-    public void startGame(){
+    public void startGame() throws FileNotFoundException {
         game = new TwoPlayersGame();
         game.initializeGame();
         textField.setText(game.getHiddenWord());

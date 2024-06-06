@@ -14,19 +14,11 @@ public class OnePlayerGame extends GameLogic{
         super(randomElement());
     }
     public void initializeGame() throws FileNotFoundException {
-        openFile();
-        randomElement();
         super.hiddenWordCharacters();
-    }
-    public void openFile() throws FileNotFoundException {
-        Scanner scanner = new Scanner(new File("src/main/resources/hangman/words.txt"));
-        while(scanner.hasNext()){
-            words.add(scanner.nextLine());
-        }
     }
     public static String randomElement() throws FileNotFoundException {
         ArrayList<String> words = new ArrayList<>();
-        Scanner scanner = new Scanner(new File("src/main/resources/hangman/words.txt"));
+        Scanner scanner = new Scanner(new File("src/main/resources/hangman/wordsList.txt"));
         while (scanner.hasNext()) {
             words.add(scanner.nextLine());
         }
